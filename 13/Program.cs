@@ -17,19 +17,17 @@ arr1[i] = rnd.Next(0,155);
 }
 
 void Difference(int[] arr,int[] arr1){
-    int max=0;
-    //int max1=0;
-    //int res =0;
-    for(int i= 0; i<arr.Length;i++){
-        if((i%2==0)&&(arr[i]>max)) {max=arr[i];//Console.WriteLine(max);
+    int max=arr[0];
+        for(int i= 0; i<arr.Length;i++){
+        if((i%2==0)&&(arr[i]<max)) {max=arr[i];//Console.WriteLine(max);
         }
     for(int j= 0; j<arr1.Length;j++){
-         if((j%2==0)&&(arr1[j]>max)) {max=arr1[j];//Console.WriteLine(max);
+         if((j%2==0)&&(arr1[j]<max)) {max=arr1[j];//Console.WriteLine(max);
     }    
        }
        
        }
-Console.WriteLine("Максимальное число: "+max);
+Console.WriteLine("Минимальное число: "+max);
 }
 
 
